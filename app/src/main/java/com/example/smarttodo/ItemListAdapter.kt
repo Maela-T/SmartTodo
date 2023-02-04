@@ -20,10 +20,10 @@ class ItemListAdapter : ListAdapter<Item, ItemListAdapter.ItemViewHolder>(ItemCo
     }
 
     class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val ItemView: TextView = itemView.findViewById(R.id.textView)
+        private val itemItemView: TextView = itemView.findViewById(R.id.textView)
 
         fun bind(text: String?) {
-            ItemView.text = text
+            itemItemView.text = text
         }
 
         companion object {

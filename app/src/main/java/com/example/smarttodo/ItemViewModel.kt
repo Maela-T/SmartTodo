@@ -9,7 +9,7 @@ class ItemViewModel(private val repository: ItemRepository) : ViewModel() {
     // - We can put an observer on the data (instead of polling for changes) and only update the
     //   the UI when the data actually changes.
     // - Repository is completely separated from the UI through the ViewModel.
-    val allItems: LiveData<List<Item>> get() = repository.allItems.asLiveData()
+    val allItems: LiveData<List<Item>> = repository.allItems.asLiveData()
 
     //Launching a new coroutine to insert the data in a non-blocking way
     fun insert(item: Item) = viewModelScope.launch {
